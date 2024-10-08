@@ -44,10 +44,6 @@ void showMainMenu() {
 //   personController.showPersonMenu();
 // }
 
-// void handleVehicles() {
-//   VehicleController vehicleController = VehicleController();
-//   vehicleController.showVehicleMenu();
-
 void handleVehicles() {
   print("Välkommen till parkeringen!");
   print("1. Lägg till fordon");
