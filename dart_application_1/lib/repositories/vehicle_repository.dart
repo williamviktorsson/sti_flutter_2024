@@ -1,5 +1,5 @@
-import 'package:cli_project/models/vehicle.dart';
-import 'package:cli_project/repositories/repository.dart';
+import 'package:dart_application_1/models/vehicle.dart';
+import 'package:dart_application_1/repositories/repository.dart';
 
 class VehicleRepository extends Repository<Vehicle> {
   VehicleRepository(this._items) : super([]);
