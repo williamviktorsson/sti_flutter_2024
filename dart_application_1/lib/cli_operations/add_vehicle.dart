@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'package:cli_project/main.dart';
-import 'package:cli_project/models/person.dart';
-import 'package:cli_project/models/vehicle.dart';
-import 'package:cli_project/repositories/vehicle_repository.dart';
+import 'package:dart_application_1/models/person.dart';
+import 'package:dart_application_1/models/vehicle.dart';
+import 'package:dart_application_1/repositories/vehicle_repository.dart';
 
 // void addVehicle() {
 //   print("Enter vehicle license plate:");
@@ -34,6 +33,8 @@ void addVehicle() {
   // Create a Person object
   Person person = Person(owner, securityNumber);
 
+  // ignore: prefer_typing_uninitialized_variables
+  var vehicleRepository;
   vehicleRepository.addVehicle(Vehicle(licensePlate, vehicleType, person));
   print("Fordon adderat");
 }

@@ -1,5 +1,5 @@
-import 'package:cli_project/models/parking_space.dart';
-import 'package:cli_project/models/vehicle.dart';
+import 'package:dart_application_1/models/parking_space.dart';
+import 'package:dart_application_1/models/vehicle.dart';
 
 class Parking {
   final Vehicle vehicle;

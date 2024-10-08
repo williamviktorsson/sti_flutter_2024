@@ -1,4 +1,4 @@
-import 'package:cli_project/models/person.dart';
+import 'package:dart_application_1/models/person.dart';
 
 class Vehicle {
   //  registreringsnummer, typ (bil, motorcykel, etc.), ägare (en Person)
