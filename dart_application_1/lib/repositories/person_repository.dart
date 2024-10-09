@@ -3,9 +3,8 @@ import 'package:dart_application_1/models/person.dart';
 import 'repository.dart';
 
 class PersonRepository extends Repository<Person> {
-  PersonRepository(this._items) : super([]);
+  PersonRepository(this._items);
 
-  @override
   List<Person> get items => _items;
 
   final List<Person> _items;
@@ -14,9 +13,8 @@ class PersonRepository extends Repository<Person> {
     _items.add(person);
   }
 
-  Person? getPersonBySecurityNumber(String securityNumber) {
-    return _items
-        .firstWhere((person) => person.securityNumber == securityNumber);
+  Person? getPersonBySecurityNumber(String ssn) {
+    return _items.firstWhere((person) => person.ssn == ssn);
   }
 
   List<Person> getAllPeople() {

@@ -7,5 +7,9 @@ class Parking {
   final DateTime startTime;
   final DateTime? endTime;
 
-  Parking(this.vehicle, this.parkingSpace, this.startTime, [this.endTime]);
+  Parking(
+      {required this.vehicle,
+      required this.parkingSpace,
+      required this.startTime,
+      required this.endTime});
 }

@@ -1,20 +1,7 @@
 import 'dart:io';
 
 import 'package:dart_application_1/models/person.dart';
-import 'package:dart_application_1/models/vehicle.dart';
 import 'package:dart_application_1/repositories/vehicle_repository.dart';
-
-// void addVehicle() {
-//   print("Enter vehicle license plate:");
-//   String licensePlate = stdin.readLineSync()!;
-
-//   print("Enter vehicle mobile number:");
-//   String mobileNumber = stdin.readLineSync()!;
-
-//   vehicles.add(Vehicle(licensePlate, mobileNumber));
-//   print("Vehicle added successfully!");
-
-// }
 
 void addVehicle() {
   print("Ange regnummer:");
@@ -24,17 +11,22 @@ void addVehicle() {
   String vehicleType = stdin.readLineSync()!;
 
   print("Ange ägare av fordon:");
-  String owner = stdin.readLineSync()!;
+  String name = stdin.readLineSync()!;
 
   print("personnummer  ddmmår:");
-  String securityNumber = stdin.readLineSync()!;
+  String ssn = stdin.readLineSync()!;
 
-  VehicleRepository([]); // Provide an empty list
-  // Create a Person object
-  Person person = Person(owner, securityNumber);
+  // Initialize the repository
+  // VehicleRepository vehicleRepository = VehicleRepository([]);
 
+  // Create a Person object using named parameters
+  // Person person = Person(owner: owner, ssn: ssn);
+  Person person = Person(name, ssn);
+
+  // Add the vehicle to the repository
   // ignore: prefer_typing_uninitialized_variables
-  var vehicleRepository;
-  vehicleRepository.addVehicle(Vehicle(licensePlate, vehicleType, person));
+  VehicleRepository([]);
+  addVehicle(licensePlate, vehicleType, person);
+
   print("Fordon adderat");
 }

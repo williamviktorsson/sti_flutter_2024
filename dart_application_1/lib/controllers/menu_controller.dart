@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:dart_application_1/controllers/menu_controller.dart';
-import 'package:dart_application_1/controllers/vehicle_controller.dart';
+import 'package:dart_application_1/cli_operations/add_vehicle.dart';
+import 'package:dart_application_1/cli_operations/search_vehicles.dart';
 
 void showMainMenu() {
   print("Välkommen till Parkeringsappen!");
@@ -21,8 +21,6 @@ void showMainMenu() {
       break;
     case 2:
       handleVehicles();
-      // VehicleController vehicleController = VehicleController();
-      // vehicleController.showVehicleMenu(menuController);
 
       break;
     case 3:
@@ -55,13 +53,15 @@ void handleVehicles() {
 
   switch (choice) {
     case 1:
-      // addVehicle();
-      print("hello i submeny, åter till huvudmeny");
+      addVehicle();
+      print("hello hello i submeny, åter till huvudmeny");
       showMainMenu();
 
       return;
     case 2:
-      // searchVehicle();
+      searchVehicle();
+      print("hello i submeny, åter till huvudmeny");
+      showMainMenu();
       return;
     case 3:
       // parkingVehicle();
